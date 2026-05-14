@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welkom bij Pierre - Medische Chatbot</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body,
+        html {
+            height: 100%;
+            background-color: rgb(188, 26, 93);
+            /* Mooie donkerblauwe achtergrond */
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .hero-section {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .btn-start {
+            background-color: #f188d6;
+            /* Mintgroene knop */
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            transition: 0.3s;
+            color: rgb(253, 253, 253);
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .btn-start:hover {
+            background-color: rgb(188, 26, 93);
+            color: white;
+            text-decoration: none;
+            transform: scale(1.5);
+        }
+
+        .avatar-bg {
+            background-color: rgb(253, 225, 147);
+            /* Dit is de kleur van de cirkel */
+            padding: 15px;
+            /* Dit is de ruimte tussen je plaatje en de rand van de cirkel */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Een mooi klein schaduwtje eronder! */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero-section">
+        <div class="container">
+            <img src="{{ url_for('static', filename='Pierre.png') }}" alt="Pierre avatar" width="120"
+                class="mb-4 rounded-circle avatar-bg">
+            <h1 class="display-4 font-weight-bold">Hallo, ik ben Pierre. </h1>
+            <p class="lead mb-4">Ik ben een virtuele medische assistent. Je kan bij mij terecht voor algemene vragen en
+                ik doe mijn best om jou te helpen. </p>
+            <a href="/chat" class="btn-start">Start een gesprek</a>
+        </div>
+    </div>
+</body>
+
+</html>
